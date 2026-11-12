@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050407">
+  <meta name="description" content="Персональное письмо от команды AURIX.">
+  <title>AURIX — Персональное письмо</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="preload" href="guild-a-display.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="invitation.js" defer></script>
+</head>
+<body>
+  <main class="experience">
+    <div class="atmosphere" aria-hidden="true">
+      <div class="ribbon"></div>
+    </div>
+    <header class="brand">
+      <img src="wordmark.svg" alt="AURIX" width="118" height="32">
+    </header>
+    <h1 class="title">Персональное письмо</h1>
+    <div class="scene">
+      <div class="envelope back" aria-hidden="true"></div>
+      <div class="card-layer">
+        <figure class="card" id="letter" aria-hidden="true">
+          <img src="invitation.webp" alt="Команда AURIX поздравляет Акопян Ирину Рафаэлевну с вхождением в XXIII рейтинг ТОП-1000 российских менеджеров. Пусть впереди будут проекты, достойные ваших амбиций, сильные решения и новые горизонты роста." width="1263" height="1787" draggable="false">
+        </figure>
+      </div>
+      <div class="envelope pocket" aria-hidden="true">
+        <div class="fold fold-left"></div>
+        <div class="fold fold-right"></div>
+        <div class="fold fold-bottom"></div>
+      </div>
+      <div class="envelope flap" aria-hidden="true">
+        <div class="flap-hinge">
+          <div class="flap-face flap-out"><img src="mark.svg" alt="" draggable="false"></div>
+          <div class="flap-face flap-in"></div>
+        </div>
+      </div>
+      <button class="envelope hit-area" type="button" aria-label="Открыть конверт" aria-expanded="false" aria-controls="letter"></button>
+    </div>
+    <footer class="controls">
+      <button class="gesture" type="button" aria-controls="letter" aria-expanded="false">
+        <span class="arrow arrow-up" aria-hidden="true"></span>
+        <span class="gesture-touch">Смахните вверх или нажмите</span>
+        <span class="gesture-mouse">Потяните вверх или нажмите</span>
+      </button>
+      <div class="actions" hidden>
+        <button type="button" class="close">Закрыть конверт</button>
+        <a class="download" href="AURIX-invitation.pdf" download>Скачать PDF <span class="arrow arrow-down" aria-hidden="true"></span></a>
+      </div>
+    </footer>
+  </main>
+  <div class="intro-strip" aria-hidden="true"></div>
+</body>
+</html>
