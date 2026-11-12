@@ -18,6 +18,8 @@
   font-synthesis: none;
   --ease-out: cubic-bezier(.23, 1, .32, 1);
   --intro-duration: 2700ms;
+  --envelope-entry-delay: 1750ms;
+  --envelope-entry-duration: 1700ms;
   --intro-top: 39%;
   --intro-bottom: 61%;
 }
@@ -273,6 +275,14 @@ button, figure { margin: 0; }
   .experience {
     animation: reveal-page var(--intro-duration) cubic-bezier(.45, 0, .22, 1);
   }
+  .scene {
+    animation: slide-in-envelope var(--envelope-entry-duration) cubic-bezier(.22, .7, .25, 1)
+      var(--envelope-entry-delay) backwards;
+  }
+  .controls {
+    animation: show-envelope-controls 480ms var(--ease-out)
+      calc(var(--envelope-entry-delay) + var(--envelope-entry-duration) - 350ms) backwards;
+  }
   .intro-strip {
     display: block;
     position: fixed;
@@ -301,4 +311,15 @@ button, figure { margin: 0; }
 @keyframes dissolve-strip {
   0%, 34% { opacity: 1; }
   72%, 100% { opacity: 0; }
+}
+
+@keyframes slide-in-envelope {
+  from {
+    transform: translateY(calc(100% - var(--stage-center) + var(--envelope-height) / 2 + 24px));
+  }
+  to { transform: translateY(0); }
+}
+@keyframes show-envelope-controls {
+  from { opacity: 0; visibility: hidden; }
+  to { opacity: 1; visibility: visible; }
 }
